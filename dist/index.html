@@ -4,10 +4,74 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://kit.fontawesome.com/6033bf0207.js" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="./css/style.css" />
 		<title>Image Gallery</title>
 	</head>
 	<body>
-		<h1 class="text-2xl">Simple Tailwind Setup</h1>
+		<!-- Globla Container -->
+		<div class="flex items-center justify-center min-h-screen bg-cyan-50">
+			<!-- Card Container -->
+			<div class="bg-white p-6 m-3 space-y-10 shadow-2xl rounded-3xl md:p-40">
+				<!-- Navbar -->
+				<nav>
+					<ul class="flex flex-col items-center justify-center space-y-3 md:flex-row md:space-y-0 md:space-x-8 md:mb-24 md:justify-end">
+						<!-- Menu Items -->
+						<li class="group">
+							<a href="#">Vector</a>
+							<div class="mx-1 mt-2 duration-500 border-b-2 opacity-0 border-black group-hover:opacity-100"></div>
+						</li>
+						<li class="group">
+							<a href="#">Illustrations</a>
+							<div class="mx-2 mt-2 duration-500 border-b-2 opacity-0 border-black group-hover:opacity-100"></div>
+						</li>
+						<li class="group">
+							<a href="#">Images</a>
+							<div class="mx-2 mt-2 duration-500 border-b-2 opacity-0 border-black group-hover:opacity-100"></div>
+						</li>
+						<li class="group">
+							<a href="#">Icons</a>
+							<div class="mx-2 mt-2 duration-500 border-b-2 opacity-0 border-black group-hover:opacity-100"></div>
+						</li>
+					</ul>
+				</nav>
+
+				<!-- Search Container -->
+				<div class="flex flex-col justify-between space-y-5 md:flex-row md:space-y-0">
+					<!-- Input Container -->
+					<form class="flex justify-between items-center border-b mr-4">
+						<input type="text" class="ml-6 border-none md:w-80 placeholder:font-thin focus:outline-none" placeholder="Search" />
+						<i class="fa-solid fa-magnifying-glass text-lg"></i>
+					</form>
+
+					<!-- Upload Button -->
+					<button
+						class="py-3 px-14 text-lg font-normal text-white bg-black border-black rounded-md shadow-2xl duration-200 hover:bg-white hover:text-black"
+					>
+						Upload
+					</button>
+				</div>
+
+				<!-- Gallery Container -->
+				<div class="grid gap-4 md:grid-cols-3">
+					<!-- Image 1 -->
+					<div class="relative group">
+						<img src="./assets/image1.jpg" alt="" class="w-72" />
+						<div
+							class="absolute bottom-0 left-0 right-0 p-2 px-4 text-white duration-500 bg-black opacity-0 group-hover:opacity-100 bg-opacity-40"
+						>
+							<div class="flex justify-between w-full flex-col">
+								<div class="font-normal"></div>
+								<p class="text-small">Abstract Painting</p>
+								<p class="text-xs">245 likes - 35 shares</p>
+							</div>
+							<div class="flex items-center">
+								<i class="fa-solid fa-bookmark"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
